@@ -22,9 +22,21 @@ namespace ArmourTester
         public void TestSlot1()
         {
             Armour ar = new Armour("Jorma", "Kokkeli", 20, 2, 2);
-            int lvl = ar.getSlot();
+            int slot = ar.getSlot();
 
-            if (lvl != 2)
+            if (slot != 2)
+            {
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        public void TestProtect1()
+        {
+            Armour ar = new Armour("Jorma", "Kokkeli", 20, 2, 2);
+            int protect = ar.getCurProt();
+
+            if (protect != 20)
             {
                 Assert.Fail();
             }
